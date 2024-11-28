@@ -12,9 +12,10 @@
       @return map.get(map.get($colors, $type), $level);
     } @else {
       @warn 'Invalid color level for color type #{$type}';
+      @return null;
     }
   } @else {
     @warn 'Invalid color type or level';
+    @return null;
   }
-  @return null;
 }
